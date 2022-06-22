@@ -1,0 +1,6 @@
+source "https://rubygems.org"
+gem "webrick"
+gem "jekyll-theme-cayman"
+gem "jekyll-sitemap"
+gem "jekyll-feed"
+gem "kramdown-parser-gfm"
