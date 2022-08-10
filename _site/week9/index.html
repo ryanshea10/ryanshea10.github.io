@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Week 9 – Ryan Shea – DREAM Project</title>
+
+        <meta charset="utf-8" />
+    <meta content='text/html; charset=utf-8' http-equiv='Content-Type'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0, maximum-scale=1.0'>
+
+    
+    <meta name="description" content="I spent week nine adding n-gram blocking to BlenderBot as well as testing a classifier to detect BlenderBot’s topic switching. Adding n-gram blocking was fairly straightforward since the BlenderBot already supports that as a decoding option. To detect topic switching I used SiameseBERT to create sentence embeddings for BlenderBot’s responses then recorded the cosine distance between the chat history versus an off-topic response and an on-topic response, respectively. This method seemed to do a pretty good job at detecting topic switches with a cosine distance of 0.3 serving as a solid threshold for determining whether or not a response is on topic or not.
+" />
+    <meta property="og:description" content="I spent week nine adding n-gram blocking to BlenderBot as well as testing a classifier to detect BlenderBot’s topic switching. Adding n-gram blocking was fairly straightforward since the BlenderBot already supports that as a decoding option. To detect topic switching I used SiameseBERT to create sentence embeddings for BlenderBot’s responses then recorded the cosine distance between the chat history versus an off-topic response and an on-topic response, respectively. This method seemed to do a pretty good job at detecting topic switches with a cosine distance of 0.3 serving as a solid threshold for determining whether or not a response is on topic or not.
+" />
+    
+    <meta name="author" content="Ryan Shea" />
+
+    
+    <meta property="og:title" content="Week 9" />
+    <meta property="twitter:title" content="Week 9" />
+    
+
+    <!--[if lt IE 9]>
+      <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" type="text/css" href="/style.css" />
+    <link rel="alternate" type="application/rss+xml" title="Ryan Shea - DREAM Project" href="/feed.xml" />
+
+    <!-- Created with Jekyll Now - http://github.com/barryclark/jekyll-now -->
+  </head>
+
+  <body>
+    <div class="wrapper-masthead">
+      <div class="container">
+        <header class="masthead clearfix">
+          <a href="/" class="site-avatar"><img src="https://ryanshea10.github.io/images/RPS_Photo.png" /></a>
+
+          <div class="site-info">
+            <h1 class="site-name"><a href="/">Ryan Shea</a></h1>
+            <p class="site-description">DREAM Project</p>
+          </div>
+
+        </header>
+      </div>
+    </div>
+
+    <div id="main" role="main" class="container">
+      <article class="post">
+  <h1>Week 9</h1>
+
+  <div class="entry">
+    <p>I spent week nine adding n-gram blocking to BlenderBot as well as testing a classifier to detect BlenderBot’s topic switching. Adding n-gram blocking was fairly straightforward since the BlenderBot already supports that as a decoding option. To detect topic switching I used SiameseBERT to create sentence embeddings for BlenderBot’s responses then recorded the cosine distance between the chat history versus an off-topic response and an on-topic response, respectively. This method seemed to do a pretty good job at detecting topic switches with a cosine distance of 0.3 serving as a solid threshold for determining whether or not a response is on topic or not.</p>
+
+  </div>
+
+  <div class="date">
+    Written on July 22, 2022
+  </div>
+
+</article>
+
+    </div>
+
+    <div class="wrapper-footer">
+      <div class="container">
+        <footer class="footer">
+          
+<a href="mailto:ryanshea10@gmail.com"><i class="svg-icon email"></i></a>
+
+
+
+
+
+
+
+
+
+
+
+        </footer>
+      </div>
+    </div>
+
+  </body>
+</html>

@@ -46,6 +46,78 @@
   
     <article class="post">
 
+      <h1><a href="/week10/">Week 10</a></h1>
+
+      <div class="entry">
+        <p>On week ten Meta somewhat unexpectedly released BlenderBot 3 which includes memory improvements compared to BlenderBot 2 and is also much larger. I spent this week deploying BlenderBot 3 and testing what type of improvements it could gain over BlenderBot 2. Overall the bot’s memory seemed to be an upgrade over BlenderBot 2 although the model still does have some similar issues with regards to contradiction and topic switching which means that our classifiers will still need to be implemented to improve responses. One big advantage to using BlenderBot 3 is that it does not have the same type of concurrent user issues that are present in BlenderBot 2. Therefore switching to this bot will allow us to scale our chat service so that many users can chat with the bot at once without needing to wait in a queue.</p>
+
+      </div>
+
+      <a href="/week10/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/week9/">Week 9</a></h1>
+
+      <div class="entry">
+        <p>I spent week nine adding n-gram blocking to BlenderBot as well as testing a classifier to detect BlenderBot’s topic switching. Adding n-gram blocking was fairly straightforward since the BlenderBot already supports that as a decoding option. To detect topic switching I used SiameseBERT to create sentence embeddings for BlenderBot’s responses then recorded the cosine distance between the chat history versus an off-topic response and an on-topic response, respectively. This method seemed to do a pretty good job at detecting topic switches with a cosine distance of 0.3 serving as a solid threshold for determining whether or not a response is on topic or not.</p>
+
+      </div>
+
+      <a href="/week9/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/week8/">Week 8</a></h1>
+
+      <div class="entry">
+        <p>On week eight we did an internal user test so we could recieve feedback on the different chatbots as well as other aspects of the website. The biggest issues with the bots that were identified were the bot being repetitive, saying contradictory things, and giving off-topic responses. I spent this week brainstorming and speaking with my advisors about potential solutions we could implement to help fix these problems. To help resolve the repetition issues we decided to add n-gram blocking into BlenderBot’s decoder and for the other two issues we decided to explore creating classifiers to detect bad responses and have the bot avoid uttering those phrases.</p>
+
+      </div>
+
+      <a href="/week8/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/week7/">Week 7</a></h1>
+
+      <div class="entry">
+        <p>During week seven I spent my time designing a new type of hybrid chatbot that uses BlenderBot as it’s driver instead of the templates that I had developed previously. Instead of having the templates dictate the flow of the conversation these bots simply use the templates to introduce a topic and have BlenderBot handle a majority of the conversation. Some bots also strategically insert template phrases and given intervals to keep the conversation on topic.</p>
+
+      </div>
+
+      <a href="/week7/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/week6/">Week 6</a></h1>
+
+      <div class="entry">
+        <p>During week six I worked on trying to fix the issue with BlenderBot 2 involving multiple concurrent users. Unfortunately the issue seemed to stem from an issue inherent in the library that we are using to set up the chat service for BlenderBot 2. Instead I created a work around which involves using a queue to handle chat requests. With this method the bot will only respond to one message at a timeand therefore the issues related to concurrent users won’t occur. This had the added benefit on keeping the services memory at a minimum as it will not be using as many resources in parallel. On the other hand, if there are many users chatting at once this method could be problematic since the bot’s response time will grow with more people in the queue. This presents a pretty big issue in terms of scalability and will likely need to be fixed at some point. I am planning to reach out to the team who wrote the library to try and resolve this issue while continuing to work on other bots using the workaround in the meantime.</p>
+
+      </div>
+
+      <a href="/week6/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
+      <h1><a href="/week5/">Week 5</a></h1>
+
+      <div class="entry">
+        <p>On week five I modified BlenderBot’s memory so that it was able to include template phrases in its memory. This was done by simply sending the template phrase to BlenderBot with a text flag to indicate whether or not the bot should respond to the phrase or only write to its memory. I also began to modify BlenderBot so that it could serve chats to multiple users concurrently. This was the most difficult thing that I did all week as it seems that BlenderBot 2 has an issue with its long term memory module where if two BlenderBot 2 agents try to write to their long term memory the agents interfere with eachother and cause errors. My work next week with involve fixing this issue.</p>
+
+      </div>
+
+      <a href="/week5/" class="read-more">Read More</a>
+    </article>
+  
+    <article class="post">
+
       <h1><a href="/week4/">Week 4</a></h1>
 
       <div class="entry">
